@@ -22,3 +22,8 @@
     return arr;
     
     }
+
+   const numbers = [500, 300, 50, 1, 3, 4, 2,  10, 65,900];
+   console.log(BubbleSort(numbers));
+
+   //[1, 2, 3, 4, 10, 50, 65, 300, 500, 900]
