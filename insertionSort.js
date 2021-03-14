@@ -5,29 +5,31 @@ Quick Sort, Merge Sort and other advanced sorting algorithms when sorting nearly
 arrays **/
 
 function InsertionSort(arr){
-    let len = arr.length;
+   let len = arr.length;
 
-    for(let i =0; i < len; i++){
-        let key = arr[i];
-        let j = i - 1;                 
+   for(let i =0; i < len; i++){
 
-        while(j >=0 && arr[j] > key){
-            arr[j+1] = arr[j];
-            j = j - 1;
+       for(let j = i; j > 0; j--){
+           if(arr[j] < arr[j-1]){
+               let temp = arr[j];
+               arr[j] = arr[j-1];
+               arr[j-1] = temp;
+           } else {
+               break;
+           }
 
-
-        }
-        arr[j+1] = key;      //Take one element at a time from the input array and insert it into the sorted list. 
-    }
-
-    return arr;
+            //We have to sublists, one sorted and one unsorted. The sorted sublist starts with the first element; then we iterate through the unsorted sublist
+           // and swap the elements backwards, the smallest of the two elements compared will be swapped to the front; think of sorting a  hand of cards.
+       }
+   }
+   return arr;
 
 }
 
 
 
-const arr = [20, 15, 18, 19, 7, 1, 2, 4, 8, 30, 22, -5, -7, 14];
+const arr = [20, 15, 18, 19, 7, 1, 2, 4, 8, 30, 22, -7, -20, -44];
 
 console.log(InsertionSort(arr));
 
-//[-7, -5, 1, 2, 4, 7, 8, 14, 15, 18, 19, 20, 22, 30]
+//[-44, -20, -7, 1, 2, 4, 7, 8, 15, 18, 19, 20, 22, 30]
