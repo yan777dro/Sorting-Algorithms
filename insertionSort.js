@@ -9,7 +9,7 @@ function InsertionSort(arr){
 
     for(let i =0; i < len; i++){
         let key = arr[i];
-        let j = i - 1;
+        let j = i - 1;                 
 
         while(j >=0 && arr[j] > key){
             arr[j+1] = arr[j];
@@ -17,7 +17,7 @@ function InsertionSort(arr){
 
 
         }
-        arr[j+1] = key;
+        arr[j+1] = key;      //Take one element at a time from the input array and insert it into the sorted list. 
     }
 
     return arr;
