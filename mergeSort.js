@@ -34,20 +34,20 @@ function merge(arr1, arr2){
   
     return result;
   }
-  
+  //sorting function
   function mergeSort(arr){
 
     if(arr.length <= 1) return arr;
   
-    let middle = Math.ceil(arr.length / 2);
+    let middle = Math.ceil(arr.length / 2);  // this is our middle
   
-    let left = mergeSort(arr.splice(0, middle));
-  
-  
-    let right = mergeSort(arr.splice(-middle));
+    let left = mergeSort(arr.splice(0, middle));  // sorting everything from the begining of the array to the middle
   
   
-    return merge( left, right);
+    let right = mergeSort(arr.splice(-middle)); // sorting everything from the middle of the array to the end
+  
+  
+    return merge( left, right);  // merge the sorted array and return the result
   }
   
   const arr = [50, 80, 100, 25, 18, 10, 1, 2, 3, 5, 6 , 12, 15, 22, 90];
