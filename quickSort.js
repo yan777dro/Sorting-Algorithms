@@ -39,7 +39,7 @@ function Pivot(arr, start = 0, end = 0){
 
 
 
-// recursive quickSort
+// sorting and returning the result
 
 function quickSort(arr, left = 0, right = arr.length - 1){
 
