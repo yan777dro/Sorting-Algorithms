@@ -1,7 +1,7 @@
 //Time Complexity: Merge Sort runs at O(n log n) at both best and worst case scenarios.
 
 /**Merge Sort is always a logarithmic sorting algorithm; dividing the array in two
-halves* and takes linear time to merge the two arrays*/
+halves and takes linear time to merge the two arrays*/
 
 // merging function
 function merge(arr1, arr2){
