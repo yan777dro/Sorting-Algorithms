@@ -10,9 +10,9 @@ function InsertionSort(arr){
 
        for(let j = i; j > 0; j--){
            if(arr[j] < arr[j-1]){
-               let temp = arr[j];
+               let swap = arr[j];
                arr[j] = arr[j-1];
-               arr[j-1] = temp;
+               arr[j-1] = swap;
            } else {
                break;
            }
