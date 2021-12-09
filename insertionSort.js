@@ -1,8 +1,7 @@
 //Time Complexity O(n^2)
 
-/**Although Insertion sort runs on quadratic time, it usually outperforms 
-Quick Sort, Merge Sort and other advanced sorting algorithms when sorting nearly sorted
-arrays **/
+//Although Insertion sort runs on quadratic time, it is often a preferred solution to sort nearly sorted arrays.
+
 
 function InsertionSort(arr){
    let len = arr.length;
