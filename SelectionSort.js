@@ -18,9 +18,9 @@ function SelectionSort(arr){
 
         }
         if(min !== i){
-            let temp = arr[i];
+            let swap = arr[i];
             arr[i] = arr[min];
-            arr[min] = temp;
+            arr[min] = swap;
         }
     }
 
